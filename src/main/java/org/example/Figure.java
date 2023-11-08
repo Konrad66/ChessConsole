@@ -10,12 +10,14 @@ public class Figure {
     }
 
 
+
+
     public int getX() {
         return 0;
     }
 
     public int getY() {
-        return 0;
+        return 6;
     }
 
 

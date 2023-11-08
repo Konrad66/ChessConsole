@@ -29,4 +29,10 @@ public class Board {
         }
         return board;
     }
+
+
+    public void createFigures(){
+        Figure pawn = new Figure("Pawn");
+        figures.add(pawn);
+    }
 }

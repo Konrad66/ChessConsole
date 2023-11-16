@@ -31,7 +31,6 @@ public class Board {
         return board;
     }
 
-
     public void createFigures() {
         for (int i = 0; i < 8; i++) {
             Figure pawn = new Figure("P", i, 6, Color.WHITE);

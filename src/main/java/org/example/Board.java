@@ -32,11 +32,14 @@ public class Board {
 
 
     public void createFigures() {
-        Figure pawn = new Figure("P", 0, 6, Color.WHITE);
-        figures.add(pawn);
-        Figure blackPawn = new Figure("P", 0, 1, Color.BLACK);
-        figures.add(blackPawn);
+        for(int i = 0; i < 8; i++){
+            Figure pawn = new Figure("P", i, 6, Color.WHITE);
+            figures.add(pawn);
+            Figure blackPawn = new Figure("P", i, 1, Color.BLACK);
+            figures.add(blackPawn);
+        }
     }
 }
 
 //TODO zrobić testy jednostkowe dla pionów
+// sprawdzić w testach działanie kolorów;

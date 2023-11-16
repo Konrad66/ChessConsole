@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Board {
 
@@ -43,6 +44,15 @@ public class Board {
             figures.add(blackFigure);
         }
     }
+
+    public String move(){
+        Scanner scanner = new Scanner(System.in);
+        String myMove = scanner.next();
+        System.out.println("Tell me want you want to do. (For example: a2a3)");
+        return myMove;
+    }
+
+
 }
 
 //TODO zrobić testy jednostkowe dla pionów

@@ -5,6 +5,6 @@ public class Main {
         Board board = new Board();
         board.createFigures();
         System.out.println(board.composeBoardView());
-
+        board.move();
     }
 }

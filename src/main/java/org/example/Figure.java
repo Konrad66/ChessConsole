@@ -4,20 +4,22 @@ public class Figure {
 
 
     private String name;
+    private int x;
+    private int y;
 
-    public Figure(String name) {
+    public Figure(String name, int x, int y) {
         this.name = name;
+        this.x = x;
+        this.y = y;
     }
-
-
 
 
     public int getX() {
-        return 0;
+        return x;
     }
 
     public int getY() {
-        return 6;
+        return y;
     }
 
 

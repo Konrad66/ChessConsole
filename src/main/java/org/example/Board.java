@@ -32,7 +32,9 @@ public class Board {
 
 
     public void createFigures() {
-        Figure pawn = new Figure("P");
+        Figure pawn = new Figure("P", 0, 6);
         figures.add(pawn);
+        Figure blackPawn = new Figure("P", 0, 1);
+        figures.add(blackPawn);
     }
 }

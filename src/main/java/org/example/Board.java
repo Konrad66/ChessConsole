@@ -8,7 +8,7 @@ public class Board {
     final static int WIDTH = 8;
     final static int HEIGHT = 8;
     final private List<Figure> figures = new ArrayList<>();
-    final private List<Character> figureSymbols = new ArrayList<>();
+    final private List<Character> figureSymbols = new ArrayList<>(List.of('T', 'K', 'B', 'Q', 'K', 'B', 'K', 'T'));
 
     public String composeBoardView() {
         String board = "";
@@ -32,20 +32,7 @@ public class Board {
     }
 
 
-
-
     public void createFigures() {
-        figureSymbols.add('T');
-        figureSymbols.add('K');
-        figureSymbols.add('B');
-        figureSymbols.add('Q');
-        figureSymbols.add('K');
-        figureSymbols.add('B');
-        figureSymbols.add('K');
-        figureSymbols.add('T');
-
-
-
         for (int i = 0; i < 8; i++) {
             Figure pawn = new Figure("P", i, 6, Color.WHITE);
             figures.add(pawn);

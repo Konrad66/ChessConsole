@@ -17,7 +17,7 @@ public class Board {
                 boolean isPlayer = false;
                 for (Figure figure : figures) {
                     if (figure.getY() == y && figure.getX() == x) {
-                        board = board + figure.getName();
+                        board = board + " " + figure.getName() + " ";
                         isPlayer = true;
                     }
                 }
@@ -31,8 +31,8 @@ public class Board {
     }
 
 
-    public void createFigures(){
-        Figure pawn = new Figure("Pawn");
+    public void createFigures() {
+        Figure pawn = new Figure("P");
         figures.add(pawn);
     }
 }

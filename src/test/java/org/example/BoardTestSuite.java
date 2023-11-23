@@ -24,4 +24,13 @@ class BoardTestSuite {
         assertEquals(0, pawn.getX());
         assertEquals(5, pawn.getY());
     }
+
+    @Test
+    public void testFigureColor(){
+        Figure whiteFigure = new Figure("T", 3, 5, Color.WHITE);
+        Figure blackFigure = new Figure("T", 3, 2, Color.BLACK);
+
+        assertEquals("T", whiteFigure.getName());
+        assertEquals("t", blackFigure.getName());
+    }
 }

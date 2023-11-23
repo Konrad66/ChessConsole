@@ -4,7 +4,6 @@ import java.util.Locale;
 
 public class Figure {
 
-
     private String name;
     private int x;
     private int y;
@@ -17,7 +16,6 @@ public class Figure {
         this.color = color;
     }
 
-
     public int getX() {
         return x;
     }
@@ -26,10 +24,9 @@ public class Figure {
         return y;
     }
 
-
     public String getName() {
-        if (Color.BLACK == color){
-           return name.toLowerCase(Locale.ROOT);
+        if (Color.BLACK == color) {
+            return name.toLowerCase(Locale.ROOT);
         }
         return name;
     }

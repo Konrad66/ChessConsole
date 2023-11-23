@@ -45,15 +45,18 @@ public class Board {
         }
     }
 
-    public String move(){
+    public String move() {
         Scanner scanner = new Scanner(System.in);
         String myMove = scanner.next();
         System.out.println("Tell me want you want to do. (For example: a2a3)");
         return myMove;
     }
 
-
+    public List<Figure> getFigures(){
+        return new ArrayList<>(figures);
+    }
 }
 
 //TODO zrobić testy jednostkowe dla pionów
 // sprawdzić w testach działanie kolorów;
+// testy jednostkowe dla pionów

@@ -12,7 +12,7 @@ class BoardTestSuite {
     private Board board;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         board = new Board();
         board.createFigures();
     }
@@ -26,7 +26,7 @@ class BoardTestSuite {
     }
 
     @Test
-    public void testFigureColor(){
+    public void testFigureColor() {
         Figure whiteFigure = new Figure("T", 3, 5, Color.WHITE);
         Figure blackFigure = new Figure("T", 3, 2, Color.BLACK);
 

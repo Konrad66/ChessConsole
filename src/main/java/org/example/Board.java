@@ -1,5 +1,6 @@
 package org.example;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -52,11 +53,22 @@ public class Board {
         return myMove;
     }
 
-    public List<Figure> getFigures(){
-        return new ArrayList<>(figures);
+    /*
+    //jedna metoda do odczytywania i jedna do przekazywania -TDD
+
+    //metoda czy poprawny ruch - TDD
+    public int[] przekształcenie/zinterpretowanie/ tlumaczenie (String input){
+
+    }
+
+     */
+
+    public Figure getFigure(int x, int y){
+        for (Figure figure : figures) {
+            if(figure.getX() == x && figure.getY() == y){
+                return figure;
+            }
+        }
+        return null;
     }
 }
-
-//TODO zrobić testy jednostkowe dla pionów
-// sprawdzić w testach działanie kolorów;
-// testy jednostkowe dla pionów

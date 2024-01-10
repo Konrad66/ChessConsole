@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BoardTestSuite {
 
+
+    //TODO zrobić test parametryzowany oraz uporządkować odpowiendnio testy
     private Board board;
 
     @BeforeEach
@@ -18,19 +20,17 @@ class BoardTestSuite {
     }
 
     @Test
-    public void locationPawnTest() {
-        Figure pawn = new Figure("T", 0, 5, Color.WHITE);
+    public void testCreateFigure() {
+        Figure tower = board.getFigure(0, 7);
+        Figure king = board.getFigure(4, 0);
+        Figure none = board.getFigure(0, 3);
 
-        assertEquals(0, pawn.getX());
-        assertEquals(5, pawn.getY());
-    }
+        assertEquals("T", tower.getName());
+        assertEquals(Color.WHITE, tower.getColor());
 
-    @Test
-    public void testFigureColor() {
-        Figure whiteFigure = new Figure("T", 3, 5, Color.WHITE);
-        Figure blackFigure = new Figure("T", 3, 2, Color.BLACK);
+        assertEquals("k", king.getName());
+        assertEquals(Color.BLACK, king.getColor());
 
-        assertEquals("T", whiteFigure.getName());
-        assertEquals("t", blackFigure.getName());
+        assertNull(none);
     }
 }

@@ -30,4 +30,8 @@ public class Figure {
         }
         return name;
     }
+
+    public Color getColor() {
+        return color;
+    }
 }

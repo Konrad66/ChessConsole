@@ -1,6 +1,5 @@
 package org.example;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -46,22 +45,38 @@ public class Board {
         }
     }
 
-    public String move() {
+
+    public void  move(){
+        String moveInput = readMoveInput();
+        String fromInput= "?";
+        String toInput= "?";
+
+        int[] fromCoords = readCoords(fromInput);
+        int[] toCoords = readCoords(toInput);
+
+        //jak uzyc metody get figure zeby upewnic sie ze fromCoords to twoja figura to coords jest puste albo przeciwnik?
+
+    }
+
+
+
+    public String readMoveInput() {
         Scanner scanner = new Scanner(System.in);
-        String myMove = scanner.next();
         System.out.println("Tell me want you want to do. (For example: a2a3)");
+        String myMove = scanner.next();
         return myMove;
     }
 
     /*
     //jedna metoda do odczytywania i jedna do przekazywania -TDD
+//musimy zinterpretować komende np a2a3 (string) na x1,y1 oraz x2, y2 (int)
+    //metoda czy poprawny ruch
 
-    //metoda czy poprawny ruch - TDD
-    public int[] przekształcenie/zinterpretowanie/ tlumaczenie (String input){
-
-    }
 
      */
+    public int[] readCoords (String input){
+        return null;
+    }
 
     public Figure getFigure(int x, int y){
         for (Figure figure : figures) {

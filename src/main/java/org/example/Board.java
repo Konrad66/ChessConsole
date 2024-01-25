@@ -45,10 +45,9 @@ public class Board {
         }
     }
 
-
     public void  move(){
         String moveInput = readMoveInput();
-        String fromInput= "?";
+        String fromInput=  "?";
         String toInput= "?";
 
         int[] fromCoords = readCoords(fromInput);
@@ -62,18 +61,22 @@ public class Board {
 
     public String readMoveInput() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Tell me want you want to do. (For example: a2a3)");
+        System.out.println("Tell me what you want to do. (For example: a2a3)");
         String myMove = scanner.next();
         return myMove;
     }
 
     /*
-    //jedna metoda do odczytywania i jedna do przekazywania -TDD
+    //jedna metoda do odczytywania i jedna do przekazywania
 //musimy zinterpretować komende np a2a3 (string) na x1,y1 oraz x2, y2 (int)
     //metoda czy poprawny ruch
 
 
+//
+
      */
+
+
     public int[] readCoords (String input){
         return null;
     }

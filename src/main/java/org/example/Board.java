@@ -86,3 +86,6 @@ public class Board {
         return null;
     }
 }
+
+
+//todo pilnowanie planszy - żeby nie dało się ruszać poza plansze

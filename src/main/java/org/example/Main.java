@@ -6,5 +6,7 @@ public class Main {
         board.createFigures();
         System.out.println(board.composeBoardView());
         board.move();
+        System.out.println(board.composeBoardView());
+
     }
 }

@@ -45,10 +45,10 @@ public class Board {
         }
     }
 
-    public void  move(){
+    public void move() {
         String moveInput = readMoveInput();
-        String fromInput=  "?";
-        String toInput= "?";
+        String fromInput = "?";
+        String toInput = "?";
 
         int[] fromCoords = readCords(fromInput);
         int[] toCoords = readCords(toInput);
@@ -56,7 +56,6 @@ public class Board {
         //jak uzyc metody get figure zeby upewnic sie ze fromCoords to twoja figura to coords jest puste albo przeciwnik?
 
     }
-
 
 
     public String readMoveInput() {
@@ -72,10 +71,36 @@ public class Board {
     //metoda czy poprawny ruch
 
 
+
      */
-    public int[] readCords(String input){
-        return null;
-    }
+    public int[] readCords(String input) {
+        if (input.length() != 2) {
+            System.out.println("Invalid input format. Please use the format 'a2'.");
+            return null; //todo rzucenie wyjątku
+        }
+        char xChar = input.charAt(0);
+        int y = Character.getNumericValue(input.charAt(1));
+
+        int x = xChar - 'a';
+        y = HEIGHT - y;
+        return new int[]{x, y};
+
+
+        /*
+        if (input.length() == 2) {
+            char xChar = input.charAt(0);
+            int y = Character.getNumericValue(input.charAt(1));
+
+            int x = xChar - 'a';
+            y = HEIGHT - y;
+            return new int[]{x, y};
+        } else {
+            System.out.println("Invalid input format. Please use the format 'a2'.");
+            return null; //todo rzucenie wyjątku
+        }
+
+
+}
 
     public Figure getFigure(int x, int y){
         for (Figure figure : figures) {
@@ -95,54 +120,6 @@ public class Board {
 
 
 /*
-package org.example;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
-public class Board {
-
-    final static int WIDTH = 8;
-    final static int HEIGHT = 8;
-    final private List<Figure> figures = new ArrayList<>();
-    final private List<Character> figureSymbols = new ArrayList<>(List.of('T', 'K', 'B', 'Q', 'K', 'B', 'K', 'T'));
-
-    public String composeBoardView() {
-        String board = "";
-        for (int y = 0; y < HEIGHT; y++) {
-            for (int x = 0; x < WIDTH; x++) {
-
-                boolean isPlayer = false;
-                for (Figure figure : figures) {
-                    if (figure.getY() == y && figure.getX() == x) {
-                        board = board + " " + figure.getName() + " ";
-                        isPlayer = true;
-                    }
-                }
-                if (!isPlayer) {
-                    board += " * ";
-                }
-            }
-            board = board + "\n";
-        }
-        return board;
-    }
-
-    public void createFigures() {
-        for (int i = 0; i < 8; i++) {
-            Figure pawn = new Figure("P", i, 6, Color.WHITE);
-            figures.add(pawn);
-            Figure blackPawn = new Figure("P", i, 1, Color.BLACK);
-            figures.add(blackPawn);
-            Figure figure = new Figure(figureSymbols.get(i) + "", i, 7, Color.WHITE);
-            figures.add(figure);
-            Figure blackFigure = new Figure(figureSymbols.get(i) + "", i, 0, Color.BLACK);
-            figures.add(blackFigure);
-        }
-    }
-
-
     public void move() {
         /*
         String moveInput = readMoveInput();
@@ -161,8 +138,6 @@ public class Board {
         } else {
             System.out.println("Invalid format. Enter coordinates in  format.");
         }
-
-
 
 String moveInput = readMoveInput();
 
@@ -276,34 +251,7 @@ public String readMoveInput() {
 
 
 
-public int[] readCords(String input) {
-    if (input.length() != 2) {
-        System.out.println("Invalid input format. Please use the format 'a2'.");
-        return null; //todo rzucenie wyjątku
-    }
-    char xChar = input.charAt(0);
-    int y = Character.getNumericValue(input.charAt(1));
 
-    int x = xChar - 'a';
-    y = HEIGHT - y;
-    return new int[]{x, y};
-
-
-        /*
-        if (input.length() == 2) {
-            char xChar = input.charAt(0);
-            int y = Character.getNumericValue(input.charAt(1));
-
-            int x = xChar - 'a';
-            y = HEIGHT - y;
-            return new int[]{x, y};
-        } else {
-            System.out.println("Invalid input format. Please use the format 'a2'.");
-            return null; //todo rzucenie wyjątku
-        }
-
-         
-}
 
 public Figure getFigure(int x, int y) {
     for (Figure figure : figures) {
@@ -319,3 +267,5 @@ public Figure getFigure(int x, int y) {
 //todo pilnować planszy - nie ma mozliwosci ruchui poza plansze
 
  */
+    }
+}
